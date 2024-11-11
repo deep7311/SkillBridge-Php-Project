@@ -1,0 +1,42 @@
+/* Slanted cut css start */
+
+.navbar {
+    position: relative;
+    overflow: hidden;
+    padding-right: 0; /* No extra padding on the right */
+}
+
+.navbar-nav {
+    position: relative;
+    z-index: 3; /* Keep the navigation items on top */
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px; /* Adjusts the start position of the backward slant */
+    width: 500px; /* Width for the backward slant */
+    height: 100%; /* Full height of the navbar */
+    background-color: #343a40; /* Same as the navbar background */
+    transform: skewX(-20deg); /* Backward slant */
+    z-index: 1;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0; /* Starts at the very end of the navbar */
+    width: 400px; /* Width for the forward slant */
+    height: 100%;
+    background-image: url('../image/programmer-quote.jpg'); /* Image for the forward slant */
+    background-size: 100% 100%; /* Makes the image cover the entire area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Ensures the image is centered */
+    transform: skewX(20deg); /* Forward slant */
+    z-index: 2;
+}
+
+
+/* slanted cut css end */
